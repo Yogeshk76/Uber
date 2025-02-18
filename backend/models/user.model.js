@@ -24,13 +24,26 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     require: true,
-    selec: false,
+    select: false,
   },
   socketId: {
     type: String,
-  },
+  }, // to locate the user in the chat
 });
 
+//Methods
 userSchema.methods.generateAuthToken = function () {
   const token = jwt.sign({ _id: this._id }, process.env.JWT_SECRET);
 };
+
+userSchema.methods.comparePassword = async function (password) {
+  return await bcrypt.compare(password, this.password);
+};
+
+userSchema.statics.hashPassword = async function (password) {
+  return await bcrypt.hash(password, 10);
+};
+
+const userModel = mongoose.model('User', userSchema);
+
+module.exports = userModel;
