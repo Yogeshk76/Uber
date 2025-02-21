@@ -6,11 +6,11 @@ import { useState } from "react";
 const UserLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [userdata, setUserdata] = useState('');
+  const [userdata, setUserData] = useState('');
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setUserdata (
+    setUserData (
       {
         email: email,
         password: password

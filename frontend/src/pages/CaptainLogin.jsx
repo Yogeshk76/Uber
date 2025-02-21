@@ -5,15 +5,15 @@ import { useState } from "react";
 const CaptainLogin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [userdata, setUserdata] = useState('');
+    const [captaindata, setCaptainData] = useState('');
   
     const submitHandler = (e) => {
       e.preventDefault();
-      setUserdata (
+      setCaptainData (
         {
           email: email,
           password: password
-        }
+        } 
       )
       setEmail('');
       setPassword('');
