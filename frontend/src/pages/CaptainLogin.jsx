@@ -6,6 +6,7 @@ const CaptainLogin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [captaindata, setCaptainData] = useState('');
+    
   
     const submitHandler = (e) => {
       e.preventDefault();
@@ -24,7 +25,7 @@ const CaptainLogin = () => {
     <div>
   <div className='p-7 h-screen flex justify-between flex-col'>
   <div>
-  <img className='w-16 mb-10' src="https://logospng.org/download/uber/logo-uber-4096.png" alt="" />
+  <img className='w-20 mb-3' src="https://logospng.org/download/uber/logo-uber-4096.png" alt="" />
 
 <form onSubmit={submitHandler}>
   <h3 className='text-lg mb-2 font-medium'>What's your email</h3>
