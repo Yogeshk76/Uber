@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@react-google-maps/api": "^2.20.6",
+    "socket.io-client": "^4.8.1"
+  }
+}
